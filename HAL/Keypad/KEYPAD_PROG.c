@@ -184,19 +184,13 @@ u8 keypad_u8GetKey(void)
 	{
 		loc_col = keypad_GetCol();
 		loc_row = keypad_GetRow(loc_col);
-		/* for dee=bugging*/
-		lcd_vidGotoRowColumn(0,0);
-		lcd_vidDisplyChar(loc_row+48);
-		lcd_vidGotoRowColumn(1,0);
-		lcd_vidDisplyChar(loc_col+48);
-		/**/
 		_delay_ms(250);	
 		keypad_vidInit();	
 		return 	keys_value[loc_row-1][loc_col-1];
 	}
 	else
 	{
-		return 0xFF;
+		return 100;
 	}
 }
 /************************************************************************************************/
