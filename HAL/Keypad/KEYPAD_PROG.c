@@ -93,28 +93,28 @@ boolean keypad_bolIsPressed(void)
 
 u8 keypad_GetCol(void)
 {
-	u8 loc_row = 0;
+	u8 loc_col = 0;
 	if (STD_LOW == dio_dioLevelReadChannel(KEYPAD_COL1_PORT,KEYPAD_COL1_CHANNEL))
 	{
-		loc_row = 1;	
+		loc_col = 1;	
 	}
 	else if (STD_LOW == dio_dioLevelReadChannel(KEYPAD_COL2_PORT,KEYPAD_COL2_CHANNEL))
 	{
-	 loc_row = 2;	
+	 loc_col = 2;	
 	}
 	else if (STD_LOW == dio_dioLevelReadChannel(KEYPAD_COL3_PORT,KEYPAD_COL3_CHANNEL))
 	{
-	 loc_row = 3;	
+	 loc_col = 3;	
 	}
 	else if (STD_LOW == dio_dioLevelReadChannel(KEYPAD_COL4_PORT,KEYPAD_COL4_CHANNEL))
 	{
-	 loc_row = 4;	
+	 loc_col = 4;	
 	}
 	else
 	{
 		/*	do nothing	*/
 	}
-	return loc_row;
+	return loc_col;
 }
 
 /***********************************************************************/
